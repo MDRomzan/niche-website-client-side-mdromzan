@@ -1,9 +1,16 @@
 import React from 'react';
+import Foother from '../../Shared/Foother/Foother';
+import Navigation from '../../Shared/Navigation/Navigation';
+import Banner from '../Banner/Banner';
+import HomeExplores from '../HomeExplores/HomeExplores';
 
 const Home = () => {
     return (
         <div>
-            <h3>This is Home</h3>
+            <Navigation></Navigation>
+            <Banner></Banner>
+            <HomeExplores></HomeExplores>
+            <Foother></Foother>
         </div>
     );
 };

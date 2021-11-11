@@ -1,0 +1,72 @@
+[
+    {
+      "key":"01",
+      "name" :"Spelli Bikes",
+      "price":"$123",
+      "Description": "Eighteenth place. Spelli is another young Ukrainian brand that produces mountain bikes for amateur riding, ordering accessories in Taiwan. Position themselves as quality at an affordable price.",
+      "img": "https://aboutmansmedia.s3.eu-west-2.amazonaws.com/wp-content/uploads/2020/06/25232523/Spelli-Bikes.jpg"
+    },
+     {
+         "key": "02",
+         "name": "Bicycles Orbea",
+         "price": "$233",
+         "Description": " Orbea are beautiful bikes native to Spain. It all started with the fact that 3 brothers founded the company in 1860 for the production of weapons. She received the name Orbea Hermanos.",
+         "img": "https://aboutmansmedia.s3.eu-west-2.amazonaws.com/wp-content/uploads/2020/06/25232341/Bicycles-Orbea.jpg"
+     },
+          {
+         "key": "03",
+         "name": "Bikes PRIDE ",
+         "price": "$333",
+         "Description": "PRIDE appeared relatively recently, in 2008. Enterprising guys from Kharkov (a city with rich bicycle traditions which was known to the whole union for its “Tourist” road network) decided to make a good cheap.",
+         "img": "https://aboutmansmedia.s3.eu-west-2.amazonaws.com/wp-content/uploads/2020/06/25232235/Bikes-PRIDE.jpg"
+     },
+          {
+         "key": "04",
+         "name": "Bergamont Bikes ",
+         "price": "$433",
+         "Description": "Reliable German Bergamont bikes are not in vain included in the list of our best manufacturers. They are designed for both beginners and professional riders. It is worth noting that .",
+         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8yepF4c4R5M3B7TxrrVN7y6umERHAMecZPm2NL2SjvwY54NOGOtygWRJ8Xx9b4BztSfE&usqp=CAU"
+     },
+          {
+         "key": "05",
+         "name": "Schwinn Bikes ",
+         "price": "$633",
+         "Description": " The American legendary company Schwinn has been producing reliable and high-quality two-wheeled vehicles for more than 116 years. Throughout its history,  many ups and downs,.",
+         "img": "https://aboutmansmedia.s3.eu-west-2.amazonaws.com/wp-content/uploads/2020/06/25232018/Schwinn-Bikes.jpg"
+     },
+          {
+         "key": "06",
+         "name": "Bianchi Bikes ",
+         "price": "$533",
+         "Description": "Twelfth place. Unfortunately, the Italian company Bianchi is little known in our country. She still remains the standard of beauty, sophistication and quality. The brand got its name in 1885 from its creator.",
+         "img": "https://aboutmansmedia.s3.eu-west-2.amazonaws.com/wp-content/uploads/2020/06/25231420/Bicycles-Norco.jpg"
+     },
+          {
+         "key": "07",
+         "name": "GT Bikes",
+         "price": "$633",
+         "Description": "GT or Gary Turner. The most important benefit is a lifetime quality guarantee. Thanks to the triangular aluminum frame welded in a unique way, the bikes are significantly lightweight, moreover.",
+         "img": "https://i0.wp.com/aboutmansmedia.s3.eu-west-2.amazonaws.com/wp-content/uploads/2020/06/25231135/105939491_758951444925916_4597104600563804759_n.jpg?resize=800%2C456&ssl=1"
+     },
+          {
+         "key": "08",
+         "name": "Bicycles Cannondale",
+         "price": "$733",
+         "Description": "Cannondale. Very popular American brand. In many ways brilliant, with a bright personality and a thirst for innovation. He got his sonorous name thanks to a town with a railway station.",
+         "img": "https://i0.wp.com/aboutmansmedia.s3.eu-west-2.amazonaws.com/wp-content/uploads/2020/06/25232940/Bicycles-Ardis.jpg?resize=538%2C301&ssl=1"
+     },
+          {
+         "key": "09",
+         "name": " Ardis Bikes",
+         "price": "$533",
+         "Description": "Ardis. We thought for a long time whether to include these bikes in the rating, but not to write about them – this is the same as ignoring an elephant in a china shop. By the number of sales in Ukrainee.",
+         "img": "https://aboutmansmedia.s3.eu-west-2.amazonaws.com/wp-content/uploads/2020/06/25225510/Specialized-Bikes-2-800x445.jpg"
+     },
+          {
+         "key": "10",
+         "name": "Specialized Bikes ",
+         "price": "$956",
+         "Description": "Specialized is a truly American brand. Its founder Mike Sinyard from California began by importing bicycle parts from Italy. From there he brought the name of the future company.",
+         "img": "https://cdn.luxatic.com/wp-content/uploads/2017/06/Scott-bikes.jpg"
+     }
+    ]
