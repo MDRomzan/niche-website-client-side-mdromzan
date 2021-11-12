@@ -16,10 +16,10 @@ const Extra = () => {
          
         <Grid item  sx={{my:5 }} xs={12} md={4}>
           <img style={sizePic} src={pic1} alt="" />
-           <Typography  varianr="h4">
+           <Typography  variant="h4">
               Race Cycycleing
            </Typography>
-           <Typography  varianr="body1">
+           <Typography  variant="body1">
               Cycling, also called bicycling or biking, is the use of bicycles for transport, recreation, exercise or sport . ... They are the principal means of transportation in many parts of the world.
            </Typography>
            
@@ -28,18 +28,18 @@ const Extra = () => {
         <Grid item  sx={{my:5 }} xs={12} md={4}>
            <img style={sizePic} src={pic2 }
            alt=""/>
-             <Typography varianr = "h4">
+             <Typography variant = "h4">
             Drive Cycleing </Typography>
-              <Typography varianr = "body1">
+              <Typography variant = "body1">
              Cycling, also called bicycling or biking, is the use of bicycles
            for transport, recreation, exercise or sport....They are the principal means of transportation in many parts of the world. </Typography>
         </Grid>
         <Grid item  sx={{my:5 }} xs={12} md={4}>
            <img style={sizePic} src={pic3} alt="" />
-           <Typography  varianr="h4">
+           <Typography  variant="h4">
                Super Cycleing
            </Typography>
-           <Typography  varianr="body1">
+           <Typography  variant="body1">
               Cycling, also called bicycling or biking, is the use of bicycles for transport, recreation, exercise or sport . ... They are the principal means of transportation in many parts of the world.
            </Typography>
         </Grid>
