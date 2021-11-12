@@ -129,7 +129,7 @@ const useFirebase =()=>{
                 setUser(user)
                 getIdToken(user)
                 .then(idToken =>{
-                    console.log(idToken)
+                    // console.log(idToken)
                     setToken(idToken)
                 })
             } else {

@@ -21,7 +21,7 @@ const MyOrders = () => {
     },[user.email]);
     const handleDelete=(id)=>{
       // console.log(id)
-      fetch(`http://localhost:5000/deleteOrder/${id}`, {
+      fetch(`https://sheltered-mountain-47444.herokuapp.com/deleteOrder/${id}`, {
         method:"DELETE",
       })
       .then(res =>res.json())

@@ -27,22 +27,25 @@ const OrderModal = ({explore,openOrder,handleOrderClose,setOrderSuccess}) => {
     const [orderInfo,setOrderInfo]=useState(initializeInfo);
 
     const handleOnBlur=(e)=>{
+      
+        
         const field=e.target.name;
         const value=e.target.value;
-        const newInfo={...orderInfo};
+        let newInfo={...orderInfo};
         newInfo[field]=value;
         console.log(newInfo);
         setOrderInfo(newInfo);
     }
      const handleOrderSubmit=(e)=>{
-
-
+      // console.log(e);
+      
         const order={
             ...orderInfo,
-            price,
-            productName:name          
+            price,          
+            productName:name,
+            status: "padding"
         }
-        console.log(order)
+        // console.log(order)
         fetch("https://sheltered-mountain-47444.herokuapp.com/orders",{
             method:"POST",
             headers:{
