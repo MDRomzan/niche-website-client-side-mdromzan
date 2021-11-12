@@ -19,8 +19,8 @@ const useFirebase =()=>{
     const [user,setUser]=useState({})
     const [error,setError]=useState("");
     const [isLoading,setIsLoading]=useState(true);
-    // const [admin,setAdmin]=useState(false);
-    // const [token,setToken]=useState("")
+     const [admin,setAdmin]=useState(false);
+     const [token,setToken]=useState("")
     // auth use all sign in and sign up
     const auth = getAuth();
 
@@ -32,7 +32,7 @@ const useFirebase =()=>{
          .then((result) => {
             
              const user = result.user;
-             //saveUser(user.email,user.displayName,"PUT")
+             saveUser(user.email,user.displayName,"PUT")
             setError("");
             const destination= location?.state?.from ||"/";
            history.push(destination);
@@ -49,20 +49,20 @@ const useFirebase =()=>{
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 setError('');
-                // const newUser = {
-                //     email,
-                //     displayName: name
-                // };
-                // setUser(newUser);
+                const newUser = {
+                    email,
+                    displayName: name
+                };
+                setUser(newUser);
                 //   save user to database
-                // saveUser(email, name, "POST")
+                saveUser(email, name, "POST")
                 //   upate user creation
-                // updateProfile(auth.currentUser, {
-                //     displayName: name
+                updateProfile(auth.currentUser, {
+                    displayName: name
 
-                // }).then(() => {}).catch((error) => {});
+                }).then(() => {}).catch((error) => {});
 
-                // history.replace("/");
+                history.replace("/");
 
              })
             .catch((error) => {
@@ -102,35 +102,36 @@ const useFirebase =()=>{
         
     }
    
-    //     const saveUser=(email,displayName,method)=>{
-    //     const user={email,displayName};
-    //     fetch("http://localhost:5000/users", {
-    //         method:method,
-    //         headers:{
-    //             "content-type":"application/json"
-    //         },
-    //         body:JSON.stringify(user)
-    //     })
-    //     .then(res =>res.json())
-    //     .then(data=>{
-    //         console.log(data)
-    //     })
-    // }
-    // // admin user
-    //     useEffect(()=>{
-    //     fetch(`http://localhost:5000/users/${user.email}`)
-    //     .then(res =>res.json())
-    //     .then(data =>setAdmin(data.admin));
-    // },[user.email]) 
+        const saveUser=(email,displayName,method)=>{
+         const user={email,displayName};
+        fetch("http://localhost:5000/users", {
+            method:method,
+            headers:{
+                "content-type":"application/json"
+            },
+            body:JSON.stringify(user)
+        })
+        .then(res =>res.json())
+        .then(data=>{
+            console.log(data)
+         })
+         }
+    // admin user
+        useEffect(()=>{
+        fetch(`http://localhost:5000/users/${user.email}`)
+        .then(res =>res.json())
+        .then(data =>setAdmin(data.admin));
+    },[user.email]) 
     // observ user state
     useEffect(()=>{
        const unsubscribed= onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user)
-                // getIdToken(user)
-                // .then(idToken =>{
-                //     setToken(idToken)
-                // })
+                getIdToken(user)
+                .then(idToken =>{
+                    console.log(idToken)
+                    setToken(idToken)
+                })
             } else {
                setUser({})
             }
@@ -143,9 +144,9 @@ const useFirebase =()=>{
    
     return {
         signInWithGoogle,
-        // admin,
+        admin,
         user,
-        // token,
+        token,
         error,
         logOut,
         isLoading,

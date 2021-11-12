@@ -4,6 +4,7 @@ import './App.css';
 import AuthProvider from './context/AuthProvider';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
+import DashBoard from './pages/DashBoard/DashBoard/DashBoard';
 import Detailes from './pages/Detailes/Detailes';
 import Explores from './pages/Explores/Explores';
 import Home from './pages/Home/Home/Home';
@@ -29,6 +30,9 @@ function App() {
           </Route>
           <PrivateRoute path="/detaile/:id">
             <Detailes></Detailes>
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard">
+            <DashBoard></DashBoard>
           </PrivateRoute>
           <Route path="/about">
             <About></About>

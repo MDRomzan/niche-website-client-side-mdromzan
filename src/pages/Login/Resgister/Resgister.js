@@ -1,18 +1,19 @@
 
 import React, { useState } from 'react';
 import { Button, CircularProgress, Container, Grid, TextField, Typography,Alert } from '@mui/material';
-import { NavLink, useHistory, useLocation } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 
 
 
 const Resgister = () => {
+    const history=useHistory();
     const [loginData,setLoginData]=useState({});
     const {error,user,registerUser, isLoading}=useAuth();
 //   const {user,signInWithGoogle,loginUser,isLoading,error}=useAuth()
 //   const history=useHistory();
 //     const location=useLocation();
-    const handleonChange=(e)=>{
+    const handleOnBlur=(e)=>{
         const field=e.target.name;
         const value=e.target.value;
          console.log(field,value) ;
@@ -26,7 +27,7 @@ const Resgister = () => {
                 return;
         }
         alert("Register Successfully")
-        registerUser(loginData.email, loginData.password)
+        registerUser(loginData.email, loginData.password,loginData.name, history)
         
         e.preventDefault();
     }
@@ -38,14 +39,14 @@ const Resgister = () => {
                     Register
                 </Typography>
                 { !isLoading && <form onSubmit={handleLoginSubmit}>
-                    <TextField  type="text" sx={{width:"75%",m:1}} id="standard-basic" onChange={handleonChange} name="name" label="Your Name" variant="standard" />
+                    <TextField  type="text" sx={{width:"75%",m:1}} id="standard-basic" onBlur={handleOnBlur} name="name" label="Your Name" variant="standard" />
 
-                    <TextField  type="email" sx={{width:"75%",m:1}} id="standard-basic" onChange={handleonChange} name="email" label="Your E-mail" variant="standard" />
+                    <TextField  type="email" sx={{width:"75%",m:1}} id="standard-basic" onBlur={handleOnBlur} name="email" label="Your E-mail" variant="standard" />
                     
-                    <TextField onChange={handleonChange}   sx={{width:"75%",m:1}} type="password" id="standard-basic" 
+                    <TextField onBlur={handleOnBlur}   sx={{width:"75%",m:1}} type="password" id="standard-basic" 
                     label="Your Password" name="password" variant="standard"  />
 
-                    <TextField onChange={handleonChange}   sx={{width:"75%",m:1}} type="password" id="standard-basic" 
+                    <TextField onBlur={handleOnBlur}   sx={{width:"75%",m:1}} type="password" id="standard-basic" 
                     label="Re-type Password" name="password2" variant="standard"  />
 
                     <Button  type="submit" style={{backgroundColor:"rgb(42, 192, 158 )"}} sx={{width:"75%",m:1}} variant="contained">

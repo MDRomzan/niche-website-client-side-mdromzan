@@ -43,8 +43,13 @@ const Navigation = () => {
         
         
 
-        {user?.email?<button onClick={logOut} className="btn-button">logout</button>:
-          <Nav.Link style={style} className="nav-btn" as={Link} to="/login">Login</Nav.Link> 
+        {user?.email?(
+          <>
+          <Nav.Link style={style} as={HashLink} to="/dashboard"className="nav-btn">DashBoard</Nav.Link>
+        <button onClick={logOut} className="btn-button">logout</button>
+         </>
+        ):(<Nav.Link style={style} className="nav-btn" as={Link} to="/login">Login</Nav.Link>
+        ) 
 
          }
         
