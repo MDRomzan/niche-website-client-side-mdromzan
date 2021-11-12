@@ -3,18 +3,22 @@ import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Explore from '../Explore/Explore';
+import Navigation from '../Shared/Navigation/Navigation';
+import Foother from '../Shared/Foother/Foother';
 
 const Explores = () => {
     const [explores,setExplores]=useState([]);
 
     
     useEffect(()=>{
-        fetch("http://localhost:5000/explores")
+        fetch("https://sheltered-mountain-47444.herokuapp.com/explores")
         .then(res => res.json())
         .then(data =>setExplores(data));
     },[])
 
     return (
+      <>
+      <Navigation></Navigation>
 <Box sx={{ flexGrow: 1 }}>
       <Container>
          
@@ -43,6 +47,8 @@ const Explores = () => {
           </Grid>
       </Container>
     </Box>
+    <Foother></Foother>
+    </>
     );
 };
 

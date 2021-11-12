@@ -5,6 +5,7 @@ import AuthProvider from './context/AuthProvider';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import DashBoard from './pages/DashBoard/DashBoard/DashBoard';
+import UpdateUser from './pages/DashBoard/UpdateUser/UpdateUser';
 import Detailes from './pages/Detailes/Detailes';
 import Explores from './pages/Explores/Explores';
 import Home from './pages/Home/Home/Home';
@@ -31,6 +32,9 @@ function App() {
           <PrivateRoute path="/detaile/:id">
             <Detailes></Detailes>
           </PrivateRoute>
+          <PrivateRoute exact path="/update-user/:id">
+            <UpdateUser></UpdateUser>
+          </PrivateRoute> 
           <PrivateRoute path="/dashboard">
             <DashBoard></DashBoard>
           </PrivateRoute>

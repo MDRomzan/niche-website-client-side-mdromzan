@@ -3,6 +3,8 @@ import { Alert,Box, Button, Container, Grid, Paper, Typography } from '@mui/mate
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import OrderModal from '../OrderModal/OrderModal';
+import Foother from '../Shared/Foother/Foother';
+import Navigation from '../Shared/Navigation/Navigation';
 import "./Detailes.css";
 
 const Detailes = () => {
@@ -17,7 +19,7 @@ const Detailes = () => {
 //     // console.log(id);
     const [explore,setExplore]=useState({});
     useEffect(()=>{
-        fetch(`http://localhost:5000/explores/${id}`)
+        fetch(`https://sheltered-mountain-47444.herokuapp.com/explores/${id}`)
         .then(res =>res.json())
         .then(data =>setExplore(data));
     },[id]);
@@ -34,6 +36,7 @@ const Detailes = () => {
     }
     return (
         <>
+        <Navigation></Navigation>
         <Container sx={{ flexGrow: 1,mt:5 }}>
       <Grid sx={{justifyContent:"center"}} container spacing={2}>
          
@@ -67,6 +70,7 @@ const Detailes = () => {
     openOrder={openOrder}
     handleOrderClose={handleOrderClose}
     ></OrderModal>
+    <Foother></Foother>
     </>
     
     );

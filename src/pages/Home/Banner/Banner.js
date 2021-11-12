@@ -24,7 +24,7 @@ const Banner = () => {
             <Box>
             
             <Typography variant="h2">
-                <span className="text">Bike lovers</span> deserve <br /> Better Enjoy <span className="degin"> Life</span>  
+                <span className="text">Bycycle lovers</span> deserve <br /> Better <span className="degin"> Life</span>  
             </Typography>
              <Typography style={{fontSize:14,color:"gray" ,fontWeight:300}} sx={{my:3}} variant="h6">
               As our world is getting modern day by day, but the craze of bicycles always remains in fashion.Some people are just crazy about bicycles, especially children.They just love to ride bicycles.

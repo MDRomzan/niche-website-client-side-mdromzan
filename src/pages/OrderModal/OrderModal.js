@@ -42,7 +42,8 @@ const OrderModal = ({explore,openOrder,handleOrderClose,setOrderSuccess}) => {
             price,
             productName:name          
         }
-        fetch("http://localhost:5000/orders",{
+        console.log(order)
+        fetch("https://sheltered-mountain-47444.herokuapp.com/orders",{
             method:"POST",
             headers:{
                 "content-type":"application/json"

@@ -11,7 +11,10 @@ import List from '@mui/material/List';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-
+import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
+import ManageProducts from "../ManageProducts/ManageProducts";
+import Pyment from "../Pyment/Pyment";
+import OrderReview from "../OrderReview/OrderReview";
 import {
   Switch,
   Route,
@@ -45,6 +48,12 @@ const drawerWidth = 240;
    
 
  }
+ const fontSize={
+   fontWeight:500,
+   fontSize:"18px",
+   
+
+ }
 function DashBoard(props) {
 
   const { window } = props;
@@ -57,13 +66,7 @@ function DashBoard(props) {
 
   const drawer = (
     <div>
-
       <Toolbar />
-      <Box>
-        
-       
-      </Box>
-
       <Link style={orderBtn} to="/explores">
          Order Now
       </Link>
@@ -74,38 +77,49 @@ function DashBoard(props) {
        
       </List>
       <Divider />
-      <List>
-        <Link style={linkSize}  to={`${url}`}>
-        <Button variant="" >My Orders</Button> 
-      </Link>
       
+        <List>
+        <Link style={linkSize}  to={`${url}`}>
+        <Button variant="contained" color="success" >My Order</Button> 
+      </Link>
+      </List>
+      <Divider />
       <br/>
+      <List>
+
       <Link style={linkSize}   to={`${url}/orderReview`}>
-        Order Review
+        <Button style={fontSize}  color="secondary"> Order Review</Button> 
+      
       </Link>
        <br/>
       <Link style={linkSize}   to={`${url}/pay`}>
-        Payment
+        <Button style={fontSize}  color="secondary">Payment</Button>
+        
       </Link>
       </List>
       <Divider />
       
       {admin && <Box>
+        <List>
         <Link style={linkSize}   to={`${url}/addProducts`}>
-         Add Products
+           <Button style={fontSize}  color="success">Addproduct</Button>
       </Link>
       <br />
           <Link style={linkSize}   to={`${url}/makeAdmin`}>
-         Make Admin
+          <Button style={fontSize}  color="success">Make Admin</Button>
+         
       </Link>
       <br/>
        <Link style={linkSize}   to={`${url}/manageAllorders`}>
-         Manage All Orders
+         <Button style={fontSize}  color="success">Manage All Orders</Button>
+         
       </Link>
       <br/>
        <Link style={linkSize}   to={`${url}/manageProducts`}>
-         Manage Products
+        <Button style={fontSize}  color="success"> Manage Products</Button>
+        
       </Link>
+      </List>
       </Box>}
       
     </div>
@@ -135,6 +149,9 @@ function DashBoard(props) {
           </IconButton>
           <Typography variant="h6" noWrap component="div">
             DashBoard
+          </Typography>
+          <Typography  sx={{mx:5}} variant="h6" noWrap component="div">
+            <Link style={{color:"white",textDecoration:"none"}} to="/">Home</Link>
           </Typography>
         </Toolbar>
       </AppBar>
@@ -179,11 +196,23 @@ function DashBoard(props) {
         <Route exact path={path}>
           <DashBoardHome></DashBoardHome>
         </Route>
+        <Route path={`${path}/pay`}>
+          <Pyment></Pyment>
+        </Route>
+        <Route path={`${path}/orderReview`}>
+         <OrderReview></OrderReview>
+        </Route>
         <AdminRoute path={`${path}/addProducts`}>
           <AddProducts></AddProducts>
         </AdminRoute>
          <AdminRoute path={`${path}/makeAdmin`}>
           <MakeAdmin></MakeAdmin>
+        </AdminRoute>
+        <AdminRoute path={`${path}/manageAllorders`}>
+          <ManageAllOrders></ManageAllOrders>
+        </AdminRoute>
+        <AdminRoute path={`${path}/manageProducts`}>
+         <ManageProducts></ManageProducts>
         </AdminRoute>
       </Switch>
                 
