@@ -12,12 +12,12 @@ const ManageAllOrders = () => {
 
 
     useEffect(()=>{
-        fetch("http://localhost:5000/orders")
+        fetch("https://sheltered-mountain-47444.herokuapp.com/orders")
         .then(res =>res.json())
         .then(data =>setOrders(data))
     },[])
     const handleUpdate=(id)=>{
-        fetch(`http://localhost:5000/updateStatus/${id}`,{
+        fetch(`https://sheltered-mountain-47444.herokuapp.com/updateStatus/${id}`, {
             method:"PUT",
             headers:{
                 "content-type":"application/json"
