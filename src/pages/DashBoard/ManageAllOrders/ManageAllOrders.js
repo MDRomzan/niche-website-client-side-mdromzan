@@ -12,7 +12,7 @@ const ManageAllOrders = () => {
 
 
     useEffect(()=>{
-        fetch("https://sheltered-mountain-47444.herokuapp.com/orders")
+        fetch("https://sheltered-mountain-47444.herokuapp.com/allOrders")
         .then(res =>res.json())
         .then(data =>setOrders(data))
     },[])
