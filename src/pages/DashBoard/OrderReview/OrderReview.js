@@ -26,7 +26,7 @@ const OrderReview = () => {
         const savedCart=getStoredCart()
         data.order =savedCart;
        console.log(data)
-        fetch('http://localhost:5000/review', {
+        fetch('https://sheltered-mountain-47444.herokuapp.com/review', {
             method:'POST',
             headers:{
                 'content-type':'application/json'
@@ -38,7 +38,7 @@ const OrderReview = () => {
             // console.log(result);
             if(result.insertedId){
                 alert("Review Successfully Done")
-                // clearTheCart()
+                clearTheCart()
                 reset()
             }
         })

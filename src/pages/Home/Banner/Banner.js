@@ -9,6 +9,7 @@ import {
     Typography,
     Container
 } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const verticalCenter = {
     display: "flex",
@@ -29,8 +30,9 @@ const Banner = () => {
              <Typography style={{fontSize:14,color:"gray" ,fontWeight:300}} sx={{my:3}} variant="h6">
               As our world is getting modern day by day, but the craze of bicycles always remains in fashion.Some people are just crazy about bicycles, especially children.They just love to ride bicycles.
             </Typography>
+                        <Link to="/about">
             <Button variant="contained" >learn More</Button>
-
+            </Link>
              </Box>
         </Grid>
       
