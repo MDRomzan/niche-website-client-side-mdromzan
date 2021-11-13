@@ -1,5 +1,7 @@
 import { Container, Grid, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
+import Rating from 'react-rating';
+import "./UserReview.css"
 
 const UserReview = () => {
     const [reviews,setReview]=useState([]);
@@ -31,7 +33,14 @@ const UserReview = () => {
                         <Typography variant="body1">
                               {review?.email}  
                         </Typography>
-                         <Typography variant="body1">
+                         <Typography sx={{p:2}} variant="body1">
+                        <Rating
+                        initialRating={review?.review}
+                        readonly  
+                        emptySymbol="far icon-color fa-star"
+                        fullSymbol = "fas icon-color fa-star">
+                        </Rating>
+                             <br />
                              Review : {review?.review}  
                         </Typography>
                      </Grid>)
@@ -44,3 +53,4 @@ const UserReview = () => {
 };
 
 export default UserReview;
+{/* <i class="fas fa-star"></i> */}
