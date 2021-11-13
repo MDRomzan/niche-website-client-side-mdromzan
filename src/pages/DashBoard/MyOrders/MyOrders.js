@@ -10,15 +10,21 @@ import Paper from '@mui/material/Paper';
 import { Button } from '@mui/material';
 
 const MyOrders = () => {
-    const {user}=useAuth();
-    const [orders,setOrders]=useState([]);
-
+    const {user,token}=useAuth();
+    const [orders,setOrdersConfirm]=useState([]);
+  // console.log(order)
     useEffect(()=>{
-        const url=`https://sheltered-mountain-47444.herokuapp.com/orders/?email=${user.email}`
-        fetch(url)
+        const url=`https://sheltered-mountain-47444.herokuapp.com/orders?email=${user.email}`
+        fetch(url,{
+          headers: {
+            "authorization": `Bearer ${token}`
+          }
+        })
         .then(res =>res.json())
-        .then(data =>setOrders(data));
-    },[user.email]);
+        .then(data=>setOrdersConfirm(data))
+        
+        
+    },[]);
     const handleDelete=(id)=>{
       // console.log(id)
       fetch(`https://sheltered-mountain-47444.herokuapp.com/deleteOrder/${id}`, {
@@ -29,7 +35,7 @@ const MyOrders = () => {
         if (data.deletedCount) {
           alert("Delete Successfully")
           const remainig = orders.filter(order => order._id !== id);
-          setOrders(remainig);
+          setOrdersConfirm(remainig);
         }
       })
 
