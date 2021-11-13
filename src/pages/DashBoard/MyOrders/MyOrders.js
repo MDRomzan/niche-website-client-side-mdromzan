@@ -14,7 +14,7 @@ const MyOrders = () => {
     const [orders,setOrdersConfirm]=useState([]);
   // console.log(order)
     useEffect(()=>{
-        const url=`https://sheltered-mountain-47444.herokuapp.com/orders?email=${user.email}`
+        const url=`http://localhost:5000/orders?email=${user.email}`
         fetch(url,{
           headers: {
             "authorization": `Bearer ${token}`
