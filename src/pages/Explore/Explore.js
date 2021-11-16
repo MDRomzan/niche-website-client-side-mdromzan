@@ -30,7 +30,7 @@ const Explore = ({explore}) => {
                         
                     </Typography>
                     <Typography  variant="h5" component="div">
-                        price:
+                        price:$
                        {price}
                         
                     </Typography>

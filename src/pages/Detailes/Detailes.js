@@ -53,7 +53,7 @@ const Detailes = () => {
                 </Typography>
                 <img className="cut-size" src={explore?.img} alt="" />
                 <Typography variant="h4">
-                    price:
+                    price:$
                     {explore?.price}
                 </Typography>
                 <Button sx={{my:3}} onClick={handleOrderOpen} variant="contained">Order Now</Button>

@@ -196,7 +196,7 @@ function DashBoard(props) {
         <Route exact path={path}>
           <DashBoardHome></DashBoardHome>
         </Route>
-        <Route path={`${path}/pay`}>
+        <Route path={`${path}/payment/:orderId`}>
           <Pyment></Pyment>
         </Route>
         <Route path={`${path}/orderReview`}>

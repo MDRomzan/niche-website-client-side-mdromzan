@@ -7,6 +7,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { Link } from 'react-router-dom';
 import { Button } from '@mui/material';
 
 const MyOrders = () => {
@@ -52,6 +53,8 @@ const MyOrders = () => {
             <TableCell align="right">E-mail</TableCell>
             <TableCell align="right">orderName</TableCell>
             <TableCell align="right">Date</TableCell>
+            <TableCell align="right">Action</TableCell>
+            <TableCell align="right">Cancel</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -65,7 +68,12 @@ const MyOrders = () => {
               </TableCell>
               <TableCell align="right">{order.email}</TableCell>
               <TableCell align="right">{order.productName}</TableCell>
-              <TableCell align="right">{order.date}</TableCell>
+              <TableCell align="right">${order.price}</TableCell>
+              <TableCell align="right">{order.payment ? 
+              "paid":
+              <Link to={`/dashboard/payment/${order._id}`}> <Button  color="secondary" variant="contained">Pay</Button></Link>
+              }</TableCell>
+              
               <Button onClick={()=>handleDelete(order?._id)} color="error" variant="contained">Cancel</Button>
             </TableRow>
           ))}

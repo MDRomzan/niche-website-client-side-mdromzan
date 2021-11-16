@@ -91,7 +91,8 @@ const OrderModal = ({explore,openOrder,handleOrderClose,setOrderSuccess}) => {
 
                 <TextField
                   disabled
-                  label = "Price"
+                  label = "Price:$"
+                  
                 sx={{width:"90%", m:1}}
                 id="outlined-size-small"             
                 defaultValue={price}
