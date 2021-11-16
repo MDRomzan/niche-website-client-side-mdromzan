@@ -12,7 +12,7 @@ const Pyment = () => {
     const {orderId}=useParams();
     const [order,setOrder]=useState({});
     useEffect(()=>{
-        fetch(`http://localhost:5000/allOrders/${orderId}`)
+        fetch(`https://sheltered-mountain-47444.herokuapp.com/allOrders/${orderId}`)
         .then(res=>res.json())
         .then(data=>setOrder(data));
 

@@ -13,7 +13,7 @@ const CheckOutFrom = ({order}) => {
     const [procssing,setProcssing]=useState(false);
     console.log(clientSecret);
     useEffect(()=>{
-        fetch("http://localhost:5000/create-payment-intent",{
+        fetch("https://sheltered-mountain-47444.herokuapp.com/create-payment-intent",{
             method:"POST",
             headers:{
               "authorization": `Bearer ${token}`,
@@ -75,7 +75,7 @@ const CheckOutFrom = ({order}) => {
               last4:paymentMethod.last4,
               transaction:paymentIntent.client_secret.slice("_secret")[0]
           } 
-          const url = `http://localhost:5000/allOrders/${_id}`
+          const url = `https://sheltered-mountain-47444.herokuapp.com/allOrders/${_id}`
           fetch(url,{
             method:"PUT",
             headers:{
