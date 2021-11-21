@@ -139,5 +139,5 @@ export default CheckOutFrom;
 4.CheckOut Form 
 ..............
 5. Create payment method
-6.
+6.ami doiadd
 */
